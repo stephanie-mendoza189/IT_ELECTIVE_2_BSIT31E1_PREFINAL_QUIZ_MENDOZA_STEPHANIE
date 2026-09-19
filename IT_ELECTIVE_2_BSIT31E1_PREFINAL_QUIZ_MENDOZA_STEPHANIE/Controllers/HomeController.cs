@@ -4,29 +4,172 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IT_ELECTIVE_2_BSIT31E1_PREFINAL_QUIZ_MENDOZA_STEPHANIE.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+       
         public IActionResult Index()
         {
-            return View();
+            return View(); 
         }
 
-        public IActionResult Privacy()
+       
+        [HttpPost]
+        public IActionResult Login(string username, string password)
+        {
+            
+            if (username == "admin" && password == "mendoza")
+            {
+                
+                return View("TableOfContents");
+            }
+            else
+            {
+               
+                ViewBag.Error = "Incorrect username or password!";
+                return View("Index");
+            }
+        }
+
+        
+        public IActionResult TableOfContents()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+
+
+        
+        public IActionResult ProjectOne()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
+        }
+
+        public IActionResult ProjectTwo()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectThree()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectFour()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectFive()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectSix()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectSeven()
+        {
+            return View();
+        }
+
+        
+
+
+
+
+
+
+
+
+        public IActionResult ProjectOnee()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectTwoo()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectThreee()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectFourr()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectFivee()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectSixx()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectSevenn()
+        {
+            return View();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public IActionResult ProjectOneee()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectTwooo()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectThreeee()
+        {
+            return View();
+        }
+
+
+
+
+        [HttpPost]
+        public IActionResult SubmitComment(string userComment)
+        {
+            if (userComment != null && userComment != "")
+            {
+                ViewBag.SavedComment = userComment;
+            }
+            else
+            {
+                ViewBag.SavedComment = "Comment cannot be empty!";
+            }
+
+            return View("ProjectOne");
         }
     }
-}
+    }
