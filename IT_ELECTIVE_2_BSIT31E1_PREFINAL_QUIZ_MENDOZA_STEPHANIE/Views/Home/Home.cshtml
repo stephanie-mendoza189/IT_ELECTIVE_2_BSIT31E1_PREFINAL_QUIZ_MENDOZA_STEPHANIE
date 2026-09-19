@@ -1,0 +1,163 @@
+﻿@{
+    ViewData["Title"] = "Home - Portfolio";
+}
+
+<div class="full-page">
+    <div class="navbar">
+        <span class="logo">STEPHANIE P. MENDOZA</span>
+        <div class="nav-links">
+            <a href="/Home/Home" style="color: #ff70a6;">Home</a>
+            <a href="/Home/TableOfContents">Table of Contents</a>
+            <a href="/Home/Index" style="color: #ff477e;">Logout</a>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+       
+        <div class="hero-card">
+            <h1>Hi, I'm Stephanie P. Mendoza </h1>
+            <h2>Aspiring Software Developer & UI/UX Designer</h2>
+            <p>
+                Third-year Bachelor of Science in Information Technology (BSIT) student at Lyceum of Alabang, Inc. (Section BSIT31E1).
+                Passionate about creating clean code and modern web interfaces.
+            </p>
+            <div style="margin-top: 25px;">
+                <a href="/Home/TableOfContents" class="pink-btn">Explore My Projects →</a>
+            </div>
+        </div>
+
+       
+        <div class="skills-grid">
+            <div class="info-card">
+                <h3>💻 Programming Languages</h3>
+                <p>C#, Java, Python, VB.Net</p>
+            </div>
+            <div class="info-card">
+                <h3>🌐 Web & Databases</h3>
+                <p>HTML, CSS, ASP.NET Core MVC, MS Access, MySQL (XAMPP)</p>
+            </div>
+            <div class="info-card">
+                <h3>🛠️ Development Tools</h3>
+                <p>Git, GitHub, Visual Studio, VS Code</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #0c101d;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #f4edd3;
+        margin: 0;
+    }
+
+    .full-page {
+        min-height: 100vh;
+        padding-bottom: 50px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background: #151b2b;
+        border-bottom: 2px solid #ff70a6;
+    }
+
+    .logo {
+        font-weight: bold;
+        color: #ff70a6;
+        font-size: 18px;
+    }
+
+    .nav-links a {
+        color: #f4edd3;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: bold;
+    }
+
+        .nav-links a:hover {
+            color: #ff70a6;
+        }
+
+    .content-wrapper {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .hero-card {
+        background: #151b2b;
+        padding: 40px;
+        border-radius: 16px;
+        border: 1px solid #2a3450;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+        .hero-card h1 {
+            color: #ff70a6;
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        .hero-card h2 {
+            color: #f4edd3;
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .hero-card p {
+            color: #a0aabf;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+    .skills-grid {
+        display: flex;
+        gap: 20px;
+    }
+
+    .info-card {
+        flex: 1;
+        background: #151b2b;
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid #2a3450;
+        text-align: center;
+    }
+
+        .info-card h3 {
+            color: #ff70a6;
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        .info-card p {
+            color: #f4edd3;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+    .pink-btn {
+        background-color: #ff477e;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.2s;
+    }
+
+        .pink-btn:hover {
+            background-color: #ff70a6;
+        }
+</style>

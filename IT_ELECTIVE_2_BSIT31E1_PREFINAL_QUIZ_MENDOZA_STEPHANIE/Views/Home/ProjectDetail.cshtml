@@ -1,0 +1,345 @@
+﻿@{
+    ViewData["Title"] = "Project Details";
+    string pName = ViewBag.ProjectName ?? "Prelim_H1";
+}
+
+<div class="full-page">
+    <div class="navbar">
+        <span class="logo">STEPHANIE P. MENDOZA</span>
+        <div class="nav-links">
+            <a href="/Home/Home">Home</a>
+            <a href="/Home/TableOfContents">Table of Contents</a>
+            <a href="/Home/Index" style="color: #ff477e;">Logout</a>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <a href="/Home/TableOfContents" class="back-btn">← Back to Table of Contents</a>
+
+        @{
+            string title = "";
+            string githubLink = "";
+            string description = "";
+
+            if (pName == "Prelim_H1")
+            {
+                title = "BSIT31E1_PRELIM_H1_MENDOZA_STEPHANIE";
+                githubLink = "https://github.com/stephanie-mendoza189/BSIT31E1_PRELIM_H1_MENDOZA_STEPHANIE.git";
+                description = "Develop a C# console-based Student Management System using fundamental programming concepts and a menu-driven interface to track student grades, compute averages, and identify top performers.";
+            }
+            else if (pName == "Prelim_A1")
+            {
+                title = "BSIT31E1_Prelim_A1_Mendoza_Stephanie";
+                githubLink = "https://github.com/stephanie-mendoza189/BSIT31E1_Prelim_A1_Mendoza_Stephanie.git";
+                description = "Develop a C# FizzBuzz console application in Visual Studio that implements conditional logic for multiples of three and five, while managing version control and repository workflow using GitHub Desktop.";
+            }
+            else if (pName == "Prelim_A2")
+            {
+                title = "BSIT31E1_Prelim_A2_Mendoza_Stephanie";
+                githubLink = "https://github.com/stephanie-mendoza189/BSIT31E1_Prelim_A2_Mendoza_Stephanie.git";
+                description = "Develop a C# console calculator in Visual Studio featuring a continuous loop and basic arithmetic operations, while tracking version control and repository synchronization with Git and GitHub Desktop.";
+            }
+            else if (pName == "Prelim_H2")
+            {
+                title = "BSIT31E1_PRELIM_H2_Mendoza_Stephanie";
+                githubLink = "https://github.com/stephanie-mendoza189/BSIT31E1_PRELIM_H2_Mendoza_Stephanie.git";
+                description = "Implement XML, JSON and CSV file reader classes and register them in a resolver to build a modular File Ingestion Engine following specific repository guidelines.";
+            }
+            else if (pName == "Prelim_Q1")
+            {
+                title = "BSIT_31E1_PRELIM_Q1_Mendoza_Stephanie";
+                githubLink = "https://github.com/stephanie-mendoza189/BSIT_31E1_PRELIM_Q1_Mendoza_Stephanie.git";
+                description = "Complete an object-oriented programming coding challenge focusing on inheritance, interfaces and vehicle design, and document your analytical answers in a reflection file.";
+            }
+            else if (pName == "Prelim_A3")
+            {
+                title = "BSIT31E1_Prelim_A3_Mendoza_Stephanie";
+                githubLink = "https://github.com/stephanie-mendoza189/BSIT31E1_Prelim_A3_Mendoza_Stephanie.git";
+                description = "Develop a C# console application that demonstrates API communication by implementing various HTTP verbs including GET, POST, PUT and DELETE.";
+            }
+            else if (pName == "Prelim_Exam")
+            {
+                title = "IT_ELECTIVE_2_PRELIM_EXAM_MENDOZA_STEPHANIE";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_2_PRELIM_EXAM_MENDOZA_STEPHANIE.git";
+                description = "Complete a comprehensive C# prelim exam consisting of two projects: one focusing on Object-Oriented Programming (OOP) principles and data models and another implementing HTTP client requests to consume external REST APIs like TheMealDB and JSONPlaceholder.";
+            }
+            else if (pName == "Midterm_A1")
+            {
+                title = "IT_ELECTIVE_2_Midterm_A1_Mendoza_Stephanie";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_2_Midterm_A1_Mendoza_Stephanie.git";
+                description = "Develop a responsive personal portfolio website using ASP.NET Core MVC, featuring a Bootstrap sidebar navigation, customized shared layout, and sections showcasing professional background, skills, projects and contact information on a single homepage.";
+            }
+            else if (pName == "Midterm_A1_Branch")
+            {
+                title = "IT_ELECTIVE_2_Midterm_A1_Mendoza_Stephanie (PART2 - BRANCH)";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_2_Midterm_A1_Mendoza_Stephanie/tree/IT_ELECTIVE_2_MIDTERM_A2_MENDOZA_STEPHANIE";
+                description = "Part2 of A1 - Develop a responsive personal portfolio website using ASP.NET Core MVC, featuring a Bootstrap sidebar navigation, customized shared layout, and sections showcasing professional background, skills, projects and contact information on a single homepage.";
+            }
+            else if (pName == "Midterm_Q1")
+            {
+                title = "IT_ELECTIVE_2_MIDTERM_Q1_BEMR";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_2_MIDTERM_Q1_BEMR.git";
+                description = "A collaboration code consist of 4 members. (Hackathon)";
+            }
+            else if (pName == "Midterm_BSIT")
+            {
+                title = "IT_ELECTIVE_BSIT_31E1_MENDOZA_STEPHANIE";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_BSIT_31E1_MENDOZA_STEPHANIE.git";
+                description = "Build an ASP.NET Core MVC login page demonstrating model binding, data annotations and server-side validation to authenticate credentials and redirect users upon successful login.";
+            }
+            else if (pName == "Midterm_Q2")
+            {
+                title = "IT_ELECTIVE_2_MIDTERM_Q2_MENDOZA_STEPHANIE";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_2_MIDTERM_Q2_MENDOZA_STEPHANIE_.git";
+                description = "Develop an authenticated ASP.NET Core MVC playlist builder using session-based authentication, custom action filters and server-side state management with DTOs and indexed model binding.";
+            }
+            else if (pName == "Midterm_Q3")
+            {
+                title = "IT_ELECTIVE_2_MIDTERM_Q3_Mendoza_Stephanie";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_2_MIDTERM_Q3_Mendoza_Stephanie.git";
+                description = "Implement cookie-based authentication, authorization attributes, and ViewModels in an ASP.NET Core MVC application to handle secure user login, password changes, and password resets using an in-memory data store.";
+            }
+            else if (pName == "Midterm_Exam3")
+            {
+                title = "IT_ELECTIVE_2_MIDTERM_EXAM_3_MENDOZA_STEPHANIE";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_2_MIDTERM_EXAM_3_MENDOZA_STEPHANIE.git";
+                description = "Develop an ASP.NET Core MVC Visitor Pass Monitoring System featuring cookie authentication, repository-based data management, full CRUD operations, and form validation using Bootstrap to track visitor entries and exits securely.";
+            }
+            else if (pName == "Midterm_H1H2H3")
+            {
+                title = "IT_ELECTIVE_2_MIDTERM_H1_H2_H3_Mendoza_Stephanie";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_2_MIDTERM_H1_H2_H3_Mendoza_Stephanie.git";
+                description = "Develop a Point of Sale (POS) web application using ASP.NET Core MVC and in-memory static repositories, featuring product browsing, shopping cart management, inventory validation, checkout processing, and transaction history tracking.";
+            }
+            else if (pName == "Prefinal_Group")
+            {
+                title = "IT_ELECTIVE_PREFINALS_PROJECT";
+                githubLink = "https://github.com/EulloJohnRaven/IT_ELECTIVE_PREFINALS_PROJECT.git";
+                description = "A group project consist of 3 members. Develop a collaborative web application project using a strict paired-programming workflow with feature branches and pull requests based on user stories from a template repository.";
+            }
+            else if (pName == "Prefinal_Exam")
+            {
+                title = "IT_ELECTIVE_2_BSIT31E1_PREFINAL_EXAM_Mendoza_Stephanie";
+                githubLink = "https://github.com/stephanie-mendoza189/IT_ELECTIVE_2_BSIT31E1_PREFINAL_EXAM_Mendoza_Stephanie.git";
+                description = "Create an ASP.NET Core MVC application and structured README to present exam questions and answers, following specific repository naming and incremental commit guidelines.";
+            }
+            else if (pName == "Prefinal_A1")
+            {
+                title = "BSIT31E1_PREFINAL_A1_MENDOZA_STEPHANIE";
+                githubLink = "https://github.com/stephanie-mendoza189/BSIT31E1_PREFINAL_A1_MENDOZA_STEPHANIE.git";
+                description = "Project assignment details and implementation files.";
+            }
+            else
+            {
+                title = "BSIT31E1_PREFINAL_H1_MENDOZA_STEPHANIE";
+                githubLink = "https://github.com/stephanie-mendoza189/BSIT31E1_PREFINAL_H1_MENDOZA_STEPHANIE.git";
+                description = "Prefinal homework repository and source code implementation.";
+            }
+        }
+
+        <div class="project-container">
+            <h1 class="project-title">@title</h1>
+
+            <div class="project-grid">
+                <div class="left-col">
+                    <div class="thumbnail-box">
+                        <img src="/images/thumbnail1.png" alt="Thumbnail" class="thumb-img" />
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="@githubLink" target="_blank" class="github-btn">View Code on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <div class="info-card">
+                        <h3>Description</h3>
+                        <p>@description</p>
+                    </div>
+
+                    <div class="info-card" style="margin-top: 20px;">
+                        <h3>Comment Section</h3>
+                        <form method="post" action="/Home/SubmitComment">
+                            <input type="hidden" name="projectName" value="@pName" />
+                            <textarea name="userComment" placeholder="Write a comment..." rows="3" class="comment-input"></textarea><br />
+                            <button type="submit" class="pink-btn">Post Comment</button>
+                        </form>
+
+                        <div style="margin-top: 15px;">
+                            <b>Latest Comment:</b>
+                            <p class="comment-display">@ViewBag.SavedComment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #0c101d;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #f4edd3;
+        margin: 0;
+    }
+
+    .full-page {
+        min-height: 100vh;
+        padding-bottom: 50px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background: #151b2b;
+        border-bottom: 2px solid #ff70a6;
+    }
+
+    .logo {
+        font-weight: bold;
+        color: #ff70a6;
+        font-size: 18px;
+    }
+
+    .nav-links a {
+        color: #f4edd3;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: bold;
+    }
+
+        .nav-links a:hover {
+            color: #ff70a6;
+        }
+
+    .content-wrapper {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    .back-btn {
+        color: #ff70a6;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+
+    .project-container {
+        background: #151b2b;
+        padding: 40px;
+        border-radius: 16px;
+        border: 1px solid #2a3450;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .project-title {
+        color: #ff70a6;
+        font-size: 26px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #2a3450;
+        padding-bottom: 15px;
+    }
+
+    .project-grid {
+        display: flex;
+        gap: 40px;
+    }
+
+    .left-col {
+        flex: 1;
+        text-align: center;
+    }
+
+    .right-col {
+        flex: 1.2;
+    }
+
+    .thumbnail-box {
+        background: #0c101d;
+        border: 2px dashed #ff70a6;
+        border-radius: 12px;
+        padding: 20px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thumb-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .info-card {
+        background: #0c101d;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #2a3450;
+    }
+
+        .info-card h3 {
+            color: #ff70a6;
+            margin-top: 0;
+        }
+
+    .comment-input {
+        width: 100%;
+        background: #151b2b;
+        border: 2px solid #2a3450;
+        border-radius: 8px;
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        font-family: inherit;
+    }
+
+    .pink-btn {
+        background-color: #ff477e;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+        .pink-btn:hover {
+            background-color: #ff70a6;
+        }
+
+    .github-btn {
+        background-color: #ff70a6;
+        color: #0c101d;
+        padding: 12px 25px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+        .github-btn:hover {
+            background-color: #ff70a6;
+            opacity: 0.9;
+        }
+
+    .comment-display {
+        background: #151b2b;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #2a3450;
+        margin-top: 5px;
+        color: #f4edd3;
+    }
+</style>

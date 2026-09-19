@@ -2,73 +2,70 @@
     ViewData["Title"] = "Login - Portfolio";
 }
 
-<div class="browser-window">
-    <div class="top-bar">
-        <span class="dots">🔴 🟡 🟢</span>
-        <span class="url">https://login.com</span>
-    </div>
-    <div class="content-box">
-        <h2>Please Login First to Access Projects</h2>
+<div class="desktop-container">
+    <div class="login-card">
+        <h1> Welcome to my portfolio</h1>
+        <p>Please login first to access my portfolio projects.</p>
 
         <form method="post" action="/Home/Login">
             <input type="text" name="username" placeholder="Enter Username" required /><br /><br />
             <input type="password" name="password" placeholder="Enter Password" required /><br /><br />
-            <button type="submit" class="btn-green">Login</button>
+            <button type="submit" class="pink-btn">Login</button>
         </form>
 
-        <p style="color: #b7410e;"><b>@ViewBag.Error</b></p>
+        <p style="color: #ff477e; margin-top: 15px;"><b>@ViewBag.Error</b></p>
     </div>
 </div>
 
 <style>
     body {
-        background-color: #f4edd3;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-        color: #4a3b32;
+        background-color: #0c101d;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #f4edd3;
+        margin: 0;
+        padding: 0;
+    }
+
+    .desktop-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-card {
+        background: #151b2b;
+        padding: 40px;
+        border-radius: 16px;
+        border: 2px solid #ff70a6;
+        box-shadow: 0 10px 30px rgba(255, 112, 166, 0.2);
         text-align: center;
-    }
-
-    .browser-window {
-        max-width: 450px;
-        margin: 30px auto;
-        background: #fffaf0;
-        border: 3px solid #8fbc8f;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        overflow: hidden;
-    }
-
-    .top-bar {
-        background: #e6dfc8;
-        padding: 8px;
-        text-align: left;
-        font-size: 12px;
-        border-bottom: 2px solid #8fbc8f;
-    }
-
-    .content-box {
-        padding: 25px;
+        width: 400px;
     }
 
     input {
-        padding: 8px;
-        width: 80%;
-        border: 2px solid #a2d2ff;
+        width: 90%;
+        padding: 12px;
+        background: #0c101d;
+        border: 2px solid #ff70a6;
         border-radius: 8px;
-        background: #fdfcf7;
+        color: white;
+        font-size: 14px;
     }
 
-    .btn-green {
-        background-color: #8fbc8f;
+    .pink-btn {
+        background-color: #ff477e;
         color: white;
         border: none;
-        padding: 8px 20px;
+        padding: 12px 30px;
         border-radius: 8px;
         font-weight: bold;
         cursor: pointer;
+        font-size: 16px;
+        transition: 0.2s;
     }
 
-        .btn-green:hover {
-            background-color: #769b76;
+        .pink-btn:hover {
+            background-color: #ff70a6;
         }
 </style>
